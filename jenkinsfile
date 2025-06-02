@@ -1,0 +1,14 @@
+pipeline {
+    agent {
+        docker{image 'python:3.12-alpine'}
+    }
+
+    stages{
+        step('python version'){
+            sh 'python --version'
+        }
+        step('insatll python packages'){
+            sh 'python3 hello.py'
+        }
+    }
+}
