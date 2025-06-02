@@ -4,11 +4,13 @@ pipeline {
     }
 
     stage{
-        steps('python version'){
-            sh 'python --version'
-        }
-        steps('insatll python packages'){
-            sh 'python3 hello.py'
+        stage{
+            steps('python version'){
+                sh 'python --version'
+            }
+            steps('insatll python packages'){
+                sh 'python3 hello.py'
+            }
         }
     }
 }
