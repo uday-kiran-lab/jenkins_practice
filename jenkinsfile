@@ -3,7 +3,7 @@ pipeline {
         docker{image 'python:3.12-alpine'}
     }
 
-    stage{
+    stages{
         stage('python version')
             steps{
                 sh 'python --version'
